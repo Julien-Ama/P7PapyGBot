@@ -14,7 +14,7 @@ class Parser:
         self.get_question_into_list()
         self.remove_stop_words()
 
-    """ Removes the punctuation """
+    """" Removes the punctuation """""
     def delete_punctuation(self):
         for oneCharacter in self.question:
             if oneCharacter in PUNCTUATION:
