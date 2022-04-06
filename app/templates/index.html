@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-widht,
+    initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <title>{{ title }}</title>
+    <style>
+        #map{
+          height:250px;
+          width:18%;
+        }
+    </style>
+</head>
+<body>
+<h1 class="titre">
+    GrandPy Bot
+</h1>
+
+<!--<img src='static/papyBot.png'>-->
+
+
+
+<div>
+    <h2>
+        Historique de discussion
+    </h2>
+    <div id="historical-content">
+
+
+    </div>
+
+</div>
+<img src='static/papyBot.png'>
+<div id="map"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+<form>
+    <fieldset>
+        <legend>Recherche</legend>
+        <label>Quelle est votre question ?</label>
+        <input id="questionByUser" type="text" name="nom">
+        <input id="button-ask-question" type="button" value="Poser la question">
+    </fieldset>
+</form>
+
+<!--    <script>-->
+<!--        function initMap(lat, lng){-->
+
+<!--          var options = {-->
+<!--            zoom:8,-->
+<!--            center:{lat:lat,lng:lng}-->
+<!--          }-->
+
+<!--          var map = new-->
+<!--          google.maps.Map(document.getElementById('map'), options);-->
+
+
+
+<!--          var marker = new google.maps.Marker({-->
+<!--            position:{lat:lat,lng:lng},-->
+<!--            map:map,-->
+<!--            icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'-->
+<!--          });-->
+
+<!--          var infoWindow = new google.maps.infoWindow({-->
+<!--            content:'<h1>Lynn MA</h1>'-->
+<!--          });-->
+
+<!--          marker.addListener('click', function(){-->
+<!--            infoWindow.open(map, marker);-->
+<!--          });-->
+<!--        }-->
+<!--    </script>-->
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2pVf0IrUZrTlaL8o1Z0_WC2cimlxAQ0Y">
+
+    </script>
+
+</body>
+<script src="{{ url_for('static', filename='js/index.js')}}"></script>
+</html>
