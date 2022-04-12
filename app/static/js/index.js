@@ -77,4 +77,7 @@ function onClickButton() {
 const button = document.getElementById("button-ask-question")
 button.addEventListener("click", onClickButton)
 
+{
+   "stack": "heroku-20"
+}
 
