@@ -1,1 +1,1 @@
-web: gunicorn p7PapyGBot:app --log-file -
+web: gunicorn wsgi:app
