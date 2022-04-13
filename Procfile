@@ -1,2 +1,2 @@
-web: gunicorn wsgi:app
-init: FLASK_APP=wsgi.py
+web: gunicorn main:app
+init: FLASK_APP=main.py
