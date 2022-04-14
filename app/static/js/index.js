@@ -15,7 +15,7 @@ function onClickButton() {
     if (map !== null) {
         map.remove()
     }
-    fetch("https://p7PapyGBot.herokuapp.com/", {
+    fetch("http://127.0.0.1:5000/question", {
         method: "POST",
         body: form
     }).then(function (response) {
