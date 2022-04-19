@@ -16,6 +16,7 @@ function onClickButton() {
         map.remove()
     }
     fetch("https://p7-papy-bot.herokuapp.com/question", {
+        mode: 'no-cors',
         method: "POST",
         body: form
     }).then(function (response) {
