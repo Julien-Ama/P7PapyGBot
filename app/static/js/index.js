@@ -16,7 +16,7 @@ function onClickButton() {
         map.remove()
     }
 
-    fetch("https://p7PapyGBot.herokuapp.com/question", {
+    fetch("https://p7-papy-bot.herokuapp.com/", {
         method: "POST",
         body: form
     }).then(function (response) {
