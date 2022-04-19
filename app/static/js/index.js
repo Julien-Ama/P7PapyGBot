@@ -18,8 +18,6 @@ function onClickButton() {
     fetch("https://p7-papy-bot.herokuapp.com/question", {
         method: "POST",
         body: form
-        const cors = require("cors");
-        app.use(cors());
     }).then(function (response) {
         response.json().then(function (responseJsonFormat) {
             document.getElementById("questionByUser").value = ""
