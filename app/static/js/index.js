@@ -15,11 +15,8 @@ function onClickButton() {
     if (map !== null) {
         map.remove()
     }
-<<<<<<<<< Temporary merge branch 1
-    fetch("http://127.0.0.1:5000/question", {
-=========
-    fetch("https://p7PapyGBot.herokuapp.com/", {
->>>>>>>>> Temporary merge branch 2
+
+    fetch("https://p7PapyGBot.herokuapp.com/question", {
         method: "POST",
         body: form
     }).then(function (response) {
