@@ -4,6 +4,7 @@ import requests
 from configuration.config import WIKI_API_URL
 from pprint import pprint
 
+
 class WikiWrapper:
 
     def __init__(self, latitude, longitude):
@@ -44,7 +45,7 @@ class WikiWrapper:
                 print(url)
 
                 self.content = {
-                    "title" : title,
-                    "description" : description,
-                    "url" : url
+                    "title": title,
+                    "description": description,
+                    "url": url
                 }

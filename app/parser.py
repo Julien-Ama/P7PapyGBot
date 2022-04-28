@@ -34,5 +34,6 @@ class Parser:
 
     """ Removes stop words and create sentence """
     def remove_stop_words(self):
-        allWordsAfterRemove = [word for word in self.question if word not in STOP_WORDS]
+        allWordsAfterRemove =\
+            [word for word in self.question if word not in STOP_WORDS]
         self.question = " ".join(allWordsAfterRemove)

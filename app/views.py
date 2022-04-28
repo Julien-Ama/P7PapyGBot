@@ -1,15 +1,17 @@
-﻿from flask import Flask, request, render_template
+﻿from flask import request, render_template
 
 from app import app
 from app import Parser
 from app import GeoWrapper
 from app import WikiWrapper
 
+
 # Pour lancer l'app : export FLASK_APP=hello + flask run
 @app.route('/')
 @app.route('/accueil')
 def hello_world():
     return render_template("index.html", title="p7 PapyGBot")
+
 
 @app.route("/question", methods=['GET', 'POST'])
 def question():
@@ -20,15 +22,16 @@ def question():
 
         parser = Parser(question)
         myGeoWrapper = GeoWrapper(parser.question)
-        myWikiWrapper = WikiWrapper(myGeoWrapper.latitude, myGeoWrapper.longitude)
+        myWikiWrapper = \
+            WikiWrapper(myGeoWrapper.latitude, myGeoWrapper.longitude)
         return {
-            "basicQuestion" : question,
+            "basicQuestion": question,
             "parsedContent": parser.question,
-            "geocode" : {
-                "latitude" : myGeoWrapper.latitude,
-                "longitude" : myGeoWrapper.longitude
+            "geocode": {
+                "latitude": myGeoWrapper.latitude,
+                "longitude": myGeoWrapper.longitude
             },
-            "wikipedia" : myWikiWrapper.content
+            "wikipedia": myWikiWrapper.content
         }
     else:
         return "Cette méthode n'est pas autorisée"

@@ -7,10 +7,12 @@ def test_parser_remove_all_accent():
     parser = Parser(question)
     assert parser.question == "he salut toue ve"
 
+
 def test_remove_ponctuation():
     question = "Hé salut, comment, tu vas ??!!??"
     parser = Parser(question)
     assert parser.question == "he salut"
+
 
 def test_remove_uppercase():
     question = "HE SALUT COMMENT TU VAS"

@@ -1,5 +1,6 @@
 from app import GeoWrapper
 
+
 def test_2():
     input = "paris"
     mock_latitude = 2.35183

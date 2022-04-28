@@ -612,7 +612,9 @@ STOP_WORDS = [
     "ô",
 ]
 
-GEO_TOKEN = "pk.eyJ1IjoiYmxhY2stc2Fkb3IiLCJhIjoiY2pvcjVqZHNzMGI5ZjNra2Z2d2dnejFjeSJ9.aSidLZ_iXoQmift7jiqi3Q"
+GEO_TOKEN = \
+    "pk.eyJ1IjoiYmxhY2stc2Fkb3IiLCJhIjoiY2pvcjVqZHNzMGI5ZjNra2Z2d2" \
+    "dnejFjeSJ9.aSidLZ_iXoQmift7jiqi3Q"
 GEO_API_URL = "https://api.mapbox.com/geocoding/v5/mapbox.places/"
 
 WIKI_API_URL = "https://fr.wikipedia.org/w/api.php"
